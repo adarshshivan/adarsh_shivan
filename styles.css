@@ -38,6 +38,17 @@ body {
 .menu-link { color: var(--muted); text-decoration: none; font-weight: 600; padding: 10px 16px; border: 2px solid var(--border); border-radius: 8px; transition: all .2s ease; background: transparent; }
 .menu-link:hover { color: var(--primary); border-color: var(--primary); background: #f0f9ff; }
 
+/* Hamburger button */
+.nav-toggle { display: none; position: relative; width: 42px; height: 42px; border-radius: 10px; border: 2px solid var(--border); background: #fff; cursor: pointer; align-items: center; justify-content: center; transition: box-shadow .2s ease, transform .2s ease; flex-direction: column; gap: 5px; }
+.nav-toggle:hover { box-shadow: var(--shadow); transform: translateY(-2px); }
+.nav-toggle .bar { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; position: relative; transition: transform .25s ease, opacity .2s ease; }
+.nav-toggle .bar + .bar { margin-top: 0; }
+
+/* Animate to X when open */
+body.nav-open .nav-toggle .bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+body.nav-open .nav-toggle .bar:nth-child(2) { opacity: 0; }
+body.nav-open .nav-toggle .bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
 /* Hero */
 .hero { background: linear-gradient(180deg, rgba(14,165,233,0.08), rgba(244,67,94,0.06)); }
 .hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: center; }
@@ -88,7 +99,11 @@ h2::after { content: ""; position: absolute; left: 0; right: auto; bottom: -6px;
   .hero-copy h1 { font-size: 2.3rem; }
 }
 @media (max-width: 720px) {
-  .menu { flex-wrap: wrap; }
+  .nav { position: relative; }
+  .nav-toggle { display: inline-flex; }
+  .menu { position: absolute; right: 24px; left: 24px; top: calc(100% + 10px); background: var(--surface); border: 1px solid var(--border); border-radius: 12px; box-shadow: var(--shadow-2); padding: 12px; display: flex; flex-direction: column; gap: 8px; opacity: 0; transform: translateY(-8px); pointer-events: none; transition: opacity .2s ease, transform .2s ease; }
+  body.nav-open .menu { opacity: 1; transform: translateY(0); pointer-events: auto; }
+  .menu-link { display: block; text-align: center; padding: 12px; }
   .hero-grid { grid-template-columns: 1fr; }
   .avatar { width: 240px; height: 240px; }
   .cards { grid-template-columns: 1fr; }
