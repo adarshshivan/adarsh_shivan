@@ -67,10 +67,6 @@ body.nav-open .nav-toggle .bar:nth-child(3) { transform: translateY(-7px) rotate
 /* About */
 #about p { color: var(--muted); max-width: 70ch; }
 
-/* Skills */
-.chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
-.chip { padding: 8px 12px; border-radius: 999px; background: #fff; border: 1px solid var(--border); color: var(--text); font-weight: 600; box-shadow: 0 2px 6px rgba(2,6,23,0.04); }
-
 /* Projects */
 .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
 .card { display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
