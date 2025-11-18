@@ -1,131 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adarsh Shivan</title>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Adarsh Shivan • Portfolio</title>
+        <meta name="description" content="Portfolio of Adarsh Shivan — Cloud & DevOps, projects, skills, and contact." />
 
-    <!-- CSS STYLE SHEET -->
-    <style>
-       
-    </style>
-</head>
-
-
-<body>
-
-    <!-- HEADER AREA -->
-    <header>
-        
-        <div>
-            <!-- Name and link back to the home section -->
-            <a href="#home">Adarsh Shivan</a>
-
-            <!-- Navigation Links -->
-            <nav>
-                <a href="#home">Home</a>
-                <a href="#about">About Me</a>
-                <a href="#projects">Projects</a>
-                <a href="#education">Education</a>
-                <a href="#contact">Contact</a>
-            </nav>
-
-        </div>
-
-
-    </header>
-
-
-        <!-- MAIN CONTENT AREA -->
-    <main>
-
-        <!-- HERO / HOME SECTION -->
-        <section id="home">
-            <div>
-                <!-- Placeholder for a professional photo or avatar -->
-                <img src="placeholder_photo.jpg" alt="Your Professional Photo">
-                
-                <!-- Main introductory text -->
-                <h1>Hi, I'm [Your Name]</h1>
-                <p>I am a passionate and results-driven [Your Profession/Role], specializing in building responsive web applications and solving complex problems with creative solutions.</p>
-                
-                <!-- Call-to-action buttons -->
-                <a href="#projects">View My Work</a>
-                <a href="#contact">Get in Touch</a>
+        <!-- Fonts & CSS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <!-- Header / Navbar -->
+        <header class="site-header">
+            <div class="container nav">
+                <a class="brand" href="#home">Adarsh Shivan</a>
+                <nav class="menu" aria-label="Primary navigation">
+                    <a href="#home" class="menu-link">Home</a>
+                    <a href="#about" class="menu-link">About</a>
+                    <a href="#skills" class="menu-link">Skills</a>
+                    <a href="#projects" class="menu-link">Projects</a>
+                    <a href="#contact" class="menu-link">Contact</a>
+                </nav>
             </div>
-        </section>
+        </header>
 
-        <!-- ABOUT ME SECTION -->
-        <section id="about">
-            <h2>About Me</h2>
-            <div>
-                <p>
-                    I have [X] years of experience working with technologies like [Technology 1], [Technology 2], and [Technology 3]. 
-                    My background is in [Your Field/Education], which has equipped me with strong problem-solving skills and a deep understanding of [Key Concept]. 
-                </p>
-                
-                <!-- Skills List (Use an unordered list for semantic structure) -->
-                <h3>My Skills</h3>
-                <ul>
-                    <li>Front-end: HTML, CSS, JavaScript, React</li>
-                    <li>Back-end: Node.js, Python, Databases</li>
-                    <li>Tools: Git, VS Code, Figma</li>
-                </ul>
+        <main>
+            <!-- Hero -->
+            <section id="home" class="section hero">
+                <div class="container hero-grid">
+                    <div class="hero-copy">
+                        <h1>
+                            Hi, I'm <span class="gradient-text">Adarsh Shivan</span>
+                        </h1>
+                        <p class="tagline">Cloud & DevOps Engineer crafting scalable, reliable systems on a bright, human-centered web.</p>
+                        <div class="cta">
+                            <a class="btn btn-primary" href="#projects">View Projects</a>
+                            <a class="btn btn-outline" href="#contact">Get in Touch</a>
+                        </div>
+                    </div>
+                    <div class="hero-visual" aria-hidden="true">
+                        <div class="avatar"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About -->
+            <section id="about" class="section">
+                <div class="container">
+                    <h2>About Me</h2>
+                    <p>
+                        I'm a cloud-focused engineer with a passion for building secure, performant, and cost‑effective infrastructure.
+                        I enjoy combining automation, observability, and clean architectures to deliver delightful developer experiences.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Skills -->
+            <section id="skills" class="section">
+                <div class="container">
+                    <h2>Skills</h2>
+                    <div class="chips">
+                        <span class="chip">AWS</span>
+                        <span class="chip">Azure</span>
+                        <span class="chip">GCP</span>
+                        <span class="chip">Docker</span>
+                        <span class="chip">Kubernetes</span>
+                        <span class="chip">Terraform</span>
+                        <span class="chip">Jenkins</span>
+                        <span class="chip">Python</span>
+                        <span class="chip">Linux</span>
+                        <span class="chip">CI/CD</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects -->
+            <section id="projects" class="section">
+                <div class="container">
+                    <h2>Projects</h2>
+                    <div class="cards">
+                        <article class="card">
+                            <div class="card-media" aria-hidden="true"></div>
+                            <div class="card-body">
+                                <h3>Multi‑Cloud Foundation</h3>
+                                <p>Baseline IaC modules to bootstrap secure networking, identity, and logging across AWS/Azure.</p>
+                                <div class="card-actions">
+                                    <a href="#" class="link">Live</a>
+                                    <a href="#" class="link">Code</a>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-media" aria-hidden="true"></div>
+                            <div class="card-body">
+                                <h3>Kubernetes Platform</h3>
+                                <p>GitOps-driven cluster with secure ingress, observability stack, and progressive delivery.</p>
+                                <div class="card-actions">
+                                    <a href="#" class="link">Live</a>
+                                    <a href="#" class="link">Code</a>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-media" aria-hidden="true"></div>
+                            <div class="card-body">
+                                <h3>Cloud Cost Guard</h3>
+                                <p>Automations and policies that detect drift, right‑size workloads, and keep bills predictable.</p>
+                                <div class="card-actions">
+                                    <a href="#" class="link">Live</a>
+                                    <a href="#" class="link">Code</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact -->
+            <section id="contact" class="section">
+                <div class="container">
+                    <h2>Get In Touch</h2>
+                    <p>Open to roles, collaborations, and interesting problems. Let’s talk!</p>
+                    <div class="cta">
+                        <a class="btn btn-primary" href="mailto:adarshshivan30@gmail.com">Email Me</a>
+                        <a class="btn btn-outline" href="https://www.linkedin.com/in/adarsh-shivan" target="_blank" rel="noopener">LinkedIn</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <p>&copy; <span id="year"></span> Adarsh Shivan. All rights reserved.</p>
             </div>
-        </section>
+        </footer>
 
-        <!-- PROJECTS SECTION -->
-        <section id="projects">
-            <h2>My Projects</h2>
-            
-            <!-- PROJECT 1 -->
-            <article>
-                <h3>Project Title One</h3>
-                <p>A brief description of Project One, highlighting the main goal and the technologies used (e.g., React and Firestore).</p>
-                <a href="#">Live Demo</a>
-                <a href="#">Source Code</a>
-            </article>
-
-            <!-- PROJECT 2 -->
-            <article>
-                <h3>Project Title Two</h3>
-                <p>A brief description of Project Two, highlighting the main challenge and the solution (e.g., a data visualization tool using D3.js).</p>
-                <a href="#">Live Demo</a>
-                <a href="#">Source Code</a>
-            </article>
-
-            <!-- ADD MORE -->
-
-        </section>
-
-        <!-- CONTACT SECTION -->
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <p>I am currently open to new opportunities. Send me a message and let's connect!</p>
-            
-            <!-- SOCIAL LINK LIST -->
-            <div>
-                <h3>Find me here:</h3>
-                <ul>
-                    <li><a href="https://linkedin.com/in/yourprofile">LinkedIn</a></li>
-                    <li><a href="https://github.com/yourprofile">GitHub</a></li>
-                    <li><a href="mailto:youremail@example.com">Email</a></li>
-                </ul>
-            </div>
-        </section>
-
-
-
-    </main>
-
-
-
-        <!-- FOOTER AREA -->
-    <footer>
-        <p>&copy; 2025 Adarsh Shivan. All rights reserved.</p>
-    </footer>
-
-
-    
-</body>
-</html>
+        <script>
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+    </body>
+    </html>
