@@ -27,6 +27,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Ensure elements with the hidden attribute are truly hidden */
+[hidden] { display: none !important; }
+
 /* ensure content sits below the fixed header */
 body { padding-top: var(--header-height); }
 
@@ -84,7 +87,7 @@ body.nav-open .nav-toggle .bar:nth-child(3) { transform: translateY(-7px) rotate
 #about p { color: var(--muted); max-width: 70ch; }
 
 /* Projects */
-.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .card { display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
 .card-media { height: 140px; background: linear-gradient(135deg, #e8f7ff, #fff0f3); }
 .card-body { padding: 16px; }
@@ -93,6 +96,14 @@ body.nav-open .nav-toggle .bar:nth-child(3) { transform: translateY(-7px) rotate
 .card-actions { margin-top: 12px; display: flex; gap: 12px; }
 .link { color: var(--primary); font-weight: 700; text-decoration: none; }
 .link:hover { color: var(--primary-dark); text-decoration: underline; }
+
+/* Projects: more toggle */
+.projects-actions { margin-top: 16px; display: flex; justify-content: center; }
+.text-toggle { background: none; border: none; color: var(--primary); font-weight: 800; cursor: pointer; padding: 10px 16px; display: inline-flex; align-items: center; gap: 8px; font-size: 1rem; }
+.text-toggle:hover { color: var(--primary-dark); text-decoration: underline; }
+
+/* Smooth collapse/expand */
+#more-projects.collapsible { overflow: hidden; transition: max-height .35s ease, opacity .25s ease; }
 
 /* Education Grid */
 .edu-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }

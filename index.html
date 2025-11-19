@@ -59,8 +59,16 @@
                 <div class="container">
                     <h2>About Me</h2>
                     <p>
-                        I'm a cloud-focused engineer with a passion for building secure, performant, and cost‑effective infrastructure.
-                        I enjoy combining automation, observability, and clean architectures to deliver delightful developer experiences.
+                        I’m a passionate Cloud Computing Professional focused on helping businesses innovate and grow through smart, 
+                        scalable cloud solutions. I have hands-on experience across major platforms including AWS and Microsoft Azure.
+                    </p>
+                    <p>
+                        I enjoy designing and deploying secure, cost-efficient, and high-performing cloud infrastructures that make a 
+                        real impact. My work involves using Docker and Kubernetes for containerization, Terraform and CloudFormation for 
+                        infrastructure automation, and CI/CD pipelines to streamline development and deployment workflows.
+                    </p>
+                    <p>
+                        I’m always eager to learn, build, and explore new technologies that push the boundaries of what’s possible in the cloud.
                     </p>
                 </div>
             </section>
@@ -103,6 +111,46 @@
                                 </div>
                             </div>
                         </article>
+                    </div>
+                    <div id="more-projects" class="cards" hidden>
+                        <article class="card">
+                            <div class="card-media" aria-hidden="true"></div>
+                            <div class="card-body">
+                                <h3>Serverless API Suite</h3>
+                                <p>Event-driven APIs on AWS Lambda with API Gateway, DynamoDB, and IaC.</p>
+                                <div class="card-actions">
+                                    <a href="#" class="link">Live</a>
+                                    <a href="#" class="link">Code</a>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-media" aria-hidden="true"></div>
+                            <div class="card-body">
+                                <h3>Observability Toolkit</h3>
+                                <p>Centralized logs, metrics, traces with OpenTelemetry and Grafana dashboards.</p>
+                                <div class="card-actions">
+                                    <a href="#" class="link">Live</a>
+                                    <a href="#" class="link">Code</a>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-media" aria-hidden="true"></div>
+                            <div class="card-body">
+                                <h3>CI/CD Accelerator</h3>
+                                <p>Reusable pipelines for testing, security scans, and blue/green deployments.</p>
+                                <div class="card-actions">
+                                    <a href="#" class="link">Live</a>
+                                    <a href="#" class="link">Code</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="projects-actions">
+                        <button id="more-projects-toggle" class="text-toggle" type="button" aria-expanded="false" aria-controls="more-projects">
+                            More Projects <span aria-hidden="true">▾</span>
+                        </button>
                     </div>
                 </div>
             </section>
@@ -197,6 +245,54 @@
                     }
                 }
                 type();
+            })();
+
+            // Projects: expand/collapse with smooth animation
+            (function(){
+                const btn = document.getElementById('more-projects-toggle');
+                const panel = document.getElementById('more-projects');
+                if (!btn || !panel) return;
+                panel.classList.add('collapsible');
+
+                // If panel is hidden initially, set collapsed animated state and unhide for transitions
+                if (panel.hasAttribute('hidden')){
+                    panel.style.maxHeight = '0px';
+                    panel.style.opacity = '0';
+                    panel.style.marginTop = '0px';
+                    panel.setAttribute('aria-hidden','true');
+                    panel.removeAttribute('hidden');
+                }
+
+                function openPanel(){
+                    panel.setAttribute('aria-hidden','false');
+                    panel.style.maxHeight = panel.scrollHeight + 'px';
+                    panel.style.opacity = '1';
+                    panel.style.marginTop = '18px';
+                    btn.setAttribute('aria-expanded','true');
+                    btn.innerHTML = 'Collapse <span aria-hidden="true">▴</span>';
+                }
+                function closePanel(){
+                    panel.setAttribute('aria-hidden','true');
+                    panel.style.maxHeight = panel.scrollHeight + 'px';
+                    void panel.offsetHeight; // reflow to apply current height
+                    panel.style.maxHeight = '0px';
+                    panel.style.opacity = '0';
+                    panel.style.marginTop = '0px';
+                    btn.setAttribute('aria-expanded','false');
+                    btn.innerHTML = 'More Projects <span aria-hidden="true">▾</span>';
+                }
+
+                btn.addEventListener('click', ()=>{
+                    const expanded = btn.getAttribute('aria-expanded') === 'true';
+                    expanded ? closePanel() : openPanel();
+                });
+
+                // Recompute height on resize so animation remains smooth across breakpoints
+                window.addEventListener('resize', ()=>{
+                    if (btn.getAttribute('aria-expanded') === 'true'){
+                        panel.style.maxHeight = panel.scrollHeight + 'px';
+                    }
+                });
             })();
         </script>
     </body>
