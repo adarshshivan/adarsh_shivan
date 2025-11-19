@@ -91,6 +91,16 @@ body.nav-open .nav-toggle .bar:nth-child(3) { transform: translateY(-7px) rotate
 .link { color: var(--primary); font-weight: 700; text-decoration: none; }
 .link:hover { color: var(--primary-dark); text-decoration: underline; }
 
+/* Education Grid */
+.edu-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+@media (max-width: 1024px){ .edu-grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 640px){ .edu-grid { grid-template-columns: 1fr; } }
+.edu-card { background: var(--surface); border:1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); overflow:hidden; display:flex; flex-direction:column; }
+.edu-part { padding:12px 16px; font-size:.9rem; }
+.edu-title { font-weight:700; font-size:1rem; background:linear-gradient(90deg,#e8f7ff,#fff0f3); }
+.edu-years { font-weight:600; color:var(--primary-dark); border-top:1px solid var(--border); }
+.edu-desc { color:var(--muted); border-top:1px solid var(--border); line-height:1.4; }
+
 /* Contact */
 #contact p { color: var(--muted); margin-bottom: 14px; }
 
