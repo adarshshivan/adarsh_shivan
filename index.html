@@ -38,11 +38,13 @@
                 <div class="container hero-grid">
                     <div class="hero-copy">
                         <h1>
-                            Hi, I'm <span class="gradient-text">Adarsh Shivan</span>
+                            Hi, I'm <span class="gradient-text"><span id="typed-name" aria-label="Adarsh Shivan"></span><span class="typed-caret" aria-hidden="true"></span></span>
                         </h1>
-                        <p class="tagline">Cloud & DevOps Engineer crafting scalable, reliable systems on a bright, human-centered web.</p>
+                        <p class="subheading">Cloud Computing Enthusiast</p>
+                        <p class="intro">Passionate about leveraging cloud technologies to build scalable, efficient, and innovative solutions. 
+                Specialized in AWS, and Azure with expertise in DevOps practices.</p>
                         <div class="cta">
-                            <a class="btn btn-primary" href="#projects">View Projects</a>
+                            <a class="btn btn-primary" href="#projects">View my works</a>
                             <a class="btn btn-outline" href="#contact">Get in Touch</a>
                         </div>
                     </div>
@@ -112,7 +114,7 @@
                     <div class="edu-grid">
                         <article class="edu-card">
                             <div class="edu-part edu-title">MCA – Master of Computer Applications</div>
-                            <div class="edu-part edu-years">Jain University • 2025 (Pursuing)</div>
+                            <div class="edu-part edu-years">Jain University Online • 2025 (Pursuing)</div>
                             <div class="edu-part edu-desc">Advanced software engineering, distributed systems & cloud architecture focus.</div>
                         </article>
                         <article class="edu-card">
@@ -180,6 +182,22 @@
             window.addEventListener('resize', ()=>{
                 if (window.innerWidth > 720) closeMenu();
             });
+
+            // Typewriter for name
+            (function(){
+                const nameTarget = document.getElementById('typed-name');
+                if (!nameTarget) return;
+                const nameText = nameTarget.getAttribute('aria-label') || '';
+                let i = 0;
+                function type(){
+                    if (i <= nameText.length){
+                        nameTarget.textContent = nameText.slice(0, i);
+                        i++;
+                        setTimeout(type, 90);
+                    }
+                }
+                type();
+            })();
         </script>
     </body>
     </html>

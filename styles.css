@@ -58,7 +58,10 @@ body.nav-open .nav-toggle .bar:nth-child(3) { transform: translateY(-7px) rotate
 .hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: center; }
 .hero-copy h1 { font-size: 2.8rem; line-height: 1.15; margin-bottom: 12px; }
 .gradient-text { background: linear-gradient(90deg, var(--primary), var(--accent)); -webkit-background-clip: text; background-clip: text; color: transparent; }
-.tagline { color: var(--muted); margin-bottom: 22px; max-width: 56ch; }
+.subheading { font-weight: 700; color: var(--primary-dark); margin: 8px 0 6px; letter-spacing: 0.2px; }
+.intro { color: var(--muted); margin-bottom: 22px; max-width: 56ch; }
+.typed-caret { display:inline-block; width: 2px; height: 1em; background: currentColor; vertical-align: -0.1em; margin-left: 2px; animation: blink 1s steps(2, start) infinite; }
+@keyframes blink { to { visibility: hidden; } }
 .cta { display: flex; gap: 12px; flex-wrap: wrap; }
 .btn { display: inline-flex; align-items: center; gap: 10px; padding: 12px 18px; border-radius: 10px; font-weight: 700; text-decoration: none; transition: all .2s ease; }
 .btn-primary { background: var(--primary); color: #fff; box-shadow: var(--shadow); }
