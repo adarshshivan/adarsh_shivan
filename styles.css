@@ -62,7 +62,19 @@ body.nav-open .nav-toggle .bar:nth-child(3) { transform: translateY(-7px) rotate
 .btn-outline { border: 2px solid var(--primary); color: var(--primary); }
 .btn-outline:hover { background: #e6f6ff; }
 .hero-visual { display: grid; place-items: center; }
-.avatar { width: 320px; height: 320px; border-radius: 50%; background: radial-gradient(circle at 30% 30%, #ffffff 0%, #e8f7ff 40%, #e8ecff 100%); border: 8px solid #fff; box-shadow: var(--shadow-2); }
+.avatar {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  background-image: url('images/adarsh.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 8px solid #fff;
+  box-shadow: var(--shadow-2);
+  overflow: hidden;
+}
 
 /* About */
 #about p { color: var(--muted); max-width: 70ch; }
