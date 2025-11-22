@@ -499,15 +499,18 @@ ul {
     .hero-grid {
         grid-template-columns: 1fr;
         text-align: center;
-        gap: 3rem;
+        gap: 2.5rem; /* slightly tighter but balanced */
     }
 
     .hero-copy .intro {
         margin: 0 auto;
+        font-size: 1rem; /* slightly smaller for readability */
+        line-height: 1.7;
     }
 
     .cta {
         justify-content: center;
+        margin-top: 1.5rem; /* reduce vertical tension */
     }
 
     .nav-toggle {
@@ -547,4 +550,16 @@ ul {
     body.nav-open .nav-toggle .bar:nth-child(3) {
         transform: rotate(-45deg) translate(5px, -6px);
     }
+}
+
+/* Extra-small devices refinements */
+@media (max-width: 480px) {
+    .section { padding: 4.5rem 0; }
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.8rem; }
+    .hero { padding-top: calc(var(--header-height) + 0.5rem); }
+    .hero-grid { gap: 2.25rem; }
+    .hero-copy .subheading { font-size: 1.05rem; letter-spacing: 0.04em; }
+    .avatar-img { max-width: 260px; margin: 0 auto; }
+    .cards, .edu-grid { gap: 1.5rem; }
 }
