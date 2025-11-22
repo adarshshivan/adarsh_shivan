@@ -1,208 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Adarsh Shivan • Portfolio</title>
-        <meta name="description" content="Portfolio of Adarsh Shivan — Cloud & DevOps, projects, skills, and contact." />
 
-        <!-- Fonts & CSS -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="styles.css" />
-    </head>
-    <body>
-        <!-- Header / Navbar -->
-        <header class="site-header">
-            <div class="container nav">
-                <a class="brand" href="#home">Adarsh Shivan</a>
-                <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Open menu">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </button>
-                <nav class="menu" id="primary-menu" aria-label="Primary navigation">
-                    <a href="#home" class="menu-link">Home</a>
-                    <a href="#about" class="menu-link">About</a>
-                    <a href="#projects" class="menu-link">Projects</a>
-                    <a href="#education" class="menu-link">Education</a>
-                    <a href="#contact" class="menu-link">Contact</a>
-                </nav>
-            </div>
-        </header>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Adarsh Shivan • Portfolio</title>
+    <meta name="description" content="Portfolio of Adarsh Shivan — Cloud & DevOps, projects, skills, and contact." />
+    <meta name="theme-color" content="#0f172a">
 
-        <main>
-            <!-- Hero -->
-            <section id="home" class="section hero">
-                <div class="container hero-grid">
-                    <div class="hero-copy">
-                        <h1>
-                            Hi, I'm <span class="gradient-text"><span id="typed-name" aria-label="Adarsh Shivan"></span><span class="typed-caret" aria-hidden="true"></span></span>
-                        </h1>
-                        <p class="subheading">Cloud Computing Enthusiast</p>
-                        <p class="intro">Passionate about leveraging cloud technologies to build scalable, efficient, and innovative solutions. 
-                Specialized in AWS, and Azure with expertise in DevOps practices.</p>
-                        <div class="cta">
-                            <a class="btn btn-primary" href="#projects">View my works</a>
-                            <a class="btn btn-outline" href="#contact">Get in Touch</a>
-                        </div>
-                    </div>
-                    <div class="hero-visual" aria-hidden="true">
-                        <img class="avatar-img" src="images/adarsh.png" alt="Adarsh Shivan">
-                    </div>
-                </div>
-            </section>
+    <!-- Fonts & CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+</head>
 
-            <!-- About -->
-            <section id="about" class="section">
-                <div class="container">
-                    <h2>About Me</h2>
-                    <p>
-                        I’m a passionate Cloud Computing Professional focused on helping businesses innovate and grow through smart, 
-                        scalable cloud solutions. I have hands-on experience across major platforms including AWS and Microsoft Azure.
-                    </p>
-                    <p>
-                        I enjoy designing and deploying secure, cost-efficient, and high-performing cloud infrastructures that make a 
-                        real impact. My work involves using Docker and Kubernetes for containerization, Terraform and CloudFormation for 
-                        infrastructure automation, and CI/CD pipelines to streamline development and deployment workflows.
-                    </p>
-                    <p>
-                        I’m always eager to learn, build, and explore new technologies that push the boundaries of what’s possible in the cloud.
-                    </p>
-                </div>
-            </section>
+<body>
+    <!-- Header / Navbar -->
+    <header class="site-header">
+        <div class="container nav">
+            <a class="brand" href="#home">Adarsh Shivan</a>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Open menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav class="menu" id="primary-menu" aria-label="Primary navigation">
+                <a href="#home" class="menu-link">Home</a>
+                <a href="#about" class="menu-link">About</a>
+                <a href="#projects" class="menu-link">Projects</a>
+                <a href="#education" class="menu-link">Education</a>
+                <a href="#contact" class="menu-link">Contact</a>
+            </nav>
+        </div>
+    </header>
 
-            <!-- Projects -->
-            <section id="projects" class="section">
-                <div class="container">
-                    <h2>Projects</h2>
-                    <div class="cards">
-                        <article class="card">
-                            <div class="card-media" aria-hidden="true"></div>
-                            <div class="card-body">
-                                <h3>Multi‑Cloud Foundation</h3>
-                                <p>Baseline IaC modules to bootstrap secure networking, identity, and logging across AWS/Azure.</p>
-                                <div class="card-actions">
-                                    <a href="#" class="link">Live</a>
-                                    <a href="#" class="link">Code</a>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="card">
-                            <div class="card-media" aria-hidden="true"></div>
-                            <div class="card-body">
-                                <h3>Kubernetes Platform</h3>
-                                <p>GitOps-driven cluster with secure ingress, observability stack, and progressive delivery.</p>
-                                <div class="card-actions">
-                                    <a href="#" class="link">Live</a>
-                                    <a href="#" class="link">Code</a>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="card">
-                            <div class="card-media" aria-hidden="true"></div>
-                            <div class="card-body">
-                                <h3>Cloud Cost Guard</h3>
-                                <p>Automations and policies that detect drift, right‑size workloads, and keep bills predictable.</p>
-                                <div class="card-actions">
-                                    <a href="#" class="link">Live</a>
-                                    <a href="#" class="link">Code</a>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                    <div id="more-projects" class="cards" hidden>
-                        <article class="card">
-                            <div class="card-media" aria-hidden="true"></div>
-                            <div class="card-body">
-                                <h3>Serverless API Suite</h3>
-                                <p>Event-driven APIs on AWS Lambda with API Gateway, DynamoDB, and IaC.</p>
-                                <div class="card-actions">
-                                    <a href="#" class="link">Live</a>
-                                    <a href="#" class="link">Code</a>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="card">
-                            <div class="card-media" aria-hidden="true"></div>
-                            <div class="card-body">
-                                <h3>Observability Toolkit</h3>
-                                <p>Centralized logs, metrics, traces with OpenTelemetry and Grafana dashboards.</p>
-                                <div class="card-actions">
-                                    <a href="#" class="link">Live</a>
-                                    <a href="#" class="link">Code</a>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="card">
-                            <div class="card-media" aria-hidden="true"></div>
-                            <div class="card-body">
-                                <h3>CI/CD Accelerator</h3>
-                                <p>Reusable pipelines for testing, security scans, and blue/green deployments.</p>
-                                <div class="card-actions">
-                                    <a href="#" class="link">Live</a>
-                                    <a href="#" class="link">Code</a>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="projects-actions">
-                        <button id="more-projects-toggle" class="text-toggle" type="button" aria-expanded="false" aria-controls="more-projects">
-                            More Projects <span aria-hidden="true">▾</span>
-                        </button>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Education -->
-            <section id="education" class="section">
-                <div class="container">
-                    <h2>Education</h2>
-                    <div class="edu-grid">
-                        <article class="edu-card">
-                            <div class="edu-part edu-title">MCA – Master of Computer Applications</div>
-                            <div class="edu-part edu-years">Jain University Online • 2025 (Pursuing)</div>
-                            <div class="edu-part edu-desc">Advanced software engineering, distributed systems & cloud architecture focus.</div>
-                        </article>
-                        <article class="edu-card">
-                            <div class="edu-part edu-title">BCA – Bachelor of Computer Applications</div>
-                            <div class="edu-part edu-years">St. Francis de Sales College • 2023</div>
-                            <div class="edu-part edu-desc">Core CS fundamentals: programming, databases, networking, web development.</div>
-                        </article>
-                        <article class="edu-card">
-                            <div class="edu-part edu-title">Cloud Certifications</div>
-                            <div class="edu-part edu-years">Besant Technologies • 2024–2025</div>
-                            <div class="edu-part edu-desc">Hands-on AWS & Azure labs: IAM, VPC, automation, security best practices.</div>
-                        </article>
-                        <article class="edu-card">
-                            <div class="edu-part edu-title">Pre-University – CEBA</div>
-                            <div class="edu-part edu-years">Sadhguru Sainath PU College • 2020</div>
-                            <div class="edu-part edu-desc">Blend of Computer Science, Economics, Business and Accounts.</div>
-                        </article>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Contact -->
-            <section id="contact" class="section">
-                <div class="container">
-                    <h2>Get In Touch</h2>
-                    <p>Open to roles, collaborations, and interesting problems. Let’s talk!</p>
+    <main>
+        <!-- Hero -->
+        <section id="home" class="section hero">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <h1>
+                        Hi, I'm <span class="gradient-text"><span id="typed-name"
+                                aria-label="Adarsh Shivan"></span><span class="typed-caret"
+                                aria-hidden="true"></span></span>
+                    </h1>
+                    <p class="subheading">Cloud Computing Enthusiast</p>
+                    <p class="intro">Passionate about leveraging cloud technologies to build scalable, efficient, and
+                        innovative solutions.
+                        Specialized in AWS, and Azure with expertise in DevOps practices.</p>
                     <div class="cta">
-                        <a class="btn btn-primary" href="mailto:adarshshivan30@gmail.com">Email Me</a>
-                        <a class="btn btn-outline" href="https://www.linkedin.com/in/adarsh-shivan" target="_blank" rel="noopener">LinkedIn</a>
+                        <a class="btn btn-primary" href="#projects">View my works</a>
+                        <a class="btn btn-outline" href="#contact">Get in Touch</a>
                     </div>
                 </div>
-            </section>
-        </main>
-
-        <footer class="site-footer">
-            <div class="container">
-                <p>&copy; <span id="year"></span> Adarsh Shivan. All rights reserved.</p>
+                <div class="hero-visual" aria-hidden="true">
+                    <img class="avatar-img" src="images/adarsh.png" alt="Adarsh Shivan">
+                </div>
             </div>
-        </footer>
+        </section>
 
-        <script src="script.js"></script>
-    </body>
-    </html>
+        <!-- About -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2>About Me</h2>
+                <p>
+                    I’m a passionate Cloud Computing Professional focused on helping businesses innovate and grow
+                    through smart,
+                    scalable cloud solutions. I have hands-on experience across major platforms including AWS and
+                    Microsoft Azure.
+                </p>
+                <p>
+                    I enjoy designing and deploying secure, cost-efficient, and high-performing cloud infrastructures
+                    that make a
+                    real impact. My work involves using Docker and Kubernetes for containerization, Terraform and
+                    CloudFormation for
+                    infrastructure automation, and CI/CD pipelines to streamline development and deployment workflows.
+                </p>
+                <p>
+                    I’m always eager to learn, build, and explore new technologies that push the boundaries of what’s
+                    possible in the cloud.
+                </p>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2>Projects</h2>
+                <div class="cards">
+                    <article class="card">
+                        <div class="card-media" aria-hidden="true"></div>
+                        <div class="card-body">
+                            <h3>Multi‑Cloud Foundation</h3>
+                            <p>Baseline IaC modules to bootstrap secure networking, identity, and logging across
+                                AWS/Azure.</p>
+                            <div class="card-actions">
+                                <a href="#" class="link">Live</a>
+                                <a href="#" class="link">Code</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-media" aria-hidden="true"></div>
+                        <div class="card-body">
+                            <h3>Kubernetes Platform</h3>
+                            <p>GitOps-driven cluster with secure ingress, observability stack, and progressive delivery.
+                            </p>
+                            <div class="card-actions">
+                                <a href="#" class="link">Live</a>
+                                <a href="#" class="link">Code</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-media" aria-hidden="true"></div>
+                        <div class="card-body">
+                            <h3>Cloud Cost Guard</h3>
+                            <p>Automations and policies that detect drift, right‑size workloads, and keep bills
+                                predictable.</p>
+                            <div class="card-actions">
+                                <a href="#" class="link">Live</a>
+                                <a href="#" class="link">Code</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div id="more-projects" class="cards" hidden>
+                    <article class="card">
+                        <div class="card-media" aria-hidden="true"></div>
+                        <div class="card-body">
+                            <h3>Serverless API Suite</h3>
+                            <p>Event-driven APIs on AWS Lambda with API Gateway, DynamoDB, and IaC.</p>
+                            <div class="card-actions">
+                                <a href="#" class="link">Live</a>
+                                <a href="#" class="link">Code</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-media" aria-hidden="true"></div>
+                        <div class="card-body">
+                            <h3>Observability Toolkit</h3>
+                            <p>Centralized logs, metrics, traces with OpenTelemetry and Grafana dashboards.</p>
+                            <div class="card-actions">
+                                <a href="#" class="link">Live</a>
+                                <a href="#" class="link">Code</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-media" aria-hidden="true"></div>
+                        <div class="card-body">
+                            <h3>CI/CD Accelerator</h3>
+                            <p>Reusable pipelines for testing, security scans, and blue/green deployments.</p>
+                            <div class="card-actions">
+                                <a href="#" class="link">Live</a>
+                                <a href="#" class="link">Code</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="projects-actions">
+                    <button id="more-projects-toggle" class="text-toggle" type="button" aria-expanded="false"
+                        aria-controls="more-projects">
+                        More Projects <span aria-hidden="true">▾</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section id="education" class="section">
+            <div class="container">
+                <h2>Education</h2>
+                <div class="edu-grid">
+                    <article class="edu-card">
+                        <div class="edu-part edu-title">MCA – Master of Computer Applications</div>
+                        <div class="edu-part edu-years">Jain University Online • 2025 (Pursuing)</div>
+                        <div class="edu-part edu-desc">Advanced software engineering, distributed systems & cloud
+                            architecture focus.</div>
+                    </article>
+                    <article class="edu-card">
+                        <div class="edu-part edu-title">BCA – Bachelor of Computer Applications</div>
+                        <div class="edu-part edu-years">St. Francis de Sales College • 2023</div>
+                        <div class="edu-part edu-desc">Core CS fundamentals: programming, databases, networking, web
+                            development.</div>
+                    </article>
+                    <article class="edu-card">
+                        <div class="edu-part edu-title">Cloud Certifications</div>
+                        <div class="edu-part edu-years">Besant Technologies • 2024–2025</div>
+                        <div class="edu-part edu-desc">Hands-on AWS & Azure labs: IAM, VPC, automation, security best
+                            practices.</div>
+                    </article>
+                    <article class="edu-card">
+                        <div class="edu-part edu-title">Pre-University – CEBA</div>
+                        <div class="edu-part edu-years">Sadhguru Sainath PU College • 2020</div>
+                        <div class="edu-part edu-desc">Blend of Computer Science, Economics, Business and Accounts.
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>Get In Touch</h2>
+                <p>Open to roles, collaborations, and interesting problems. Let’s talk!</p>
+                <div class="cta">
+                    <a class="btn btn-primary" href="mailto:adarshshivan30@gmail.com">Email Me</a>
+                    <a class="btn btn-outline" href="https://www.linkedin.com/in/adarsh-shivan" target="_blank"
+                        rel="noopener">LinkedIn</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Adarsh Shivan. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
