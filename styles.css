@@ -148,6 +148,11 @@ ul {
     color: transparent;
     display: inline-block;
 }
+.hero-name {
+    color: #e2e8f0;
+    display: inline-block;
+    font-weight: 800;
+}
 
 /* Header / Navbar */
 .site-header {
@@ -174,10 +179,7 @@ ul {
 .brand {
     font-size: 1.5rem;
     font-weight: 800;
-    background: var(--accent-gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    color: #cbd5e1;
 }
 
 .menu {
