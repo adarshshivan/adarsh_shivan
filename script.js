@@ -48,54 +48,52 @@ window.addEventListener('resize', () => {
 })();
 
 // --- Expand / collapse extra projects ---
-// Adds smooth animation using max-height & opacity
-(function () {
+// Refactored: class-based collapsible with DOMContentLoaded init
+document.addEventListener('DOMContentLoaded', () => {
   const btn = document.getElementById('more-projects-toggle');
   const panel = document.getElementById('more-projects');
   if (!btn || !panel) return;
-  panel.classList.add('collapsible');
 
-  // Initialize collapsed state (started hidden in markup)
-  if (panel.hasAttribute('hidden')) {
-    panel.style.maxHeight = '0px';
-    panel.style.opacity = '0';
-    panel.style.marginTop = '0px';
-    panel.setAttribute('aria-hidden', 'true');
-    panel.removeAttribute('hidden');
-  }
+  // Initial collapsed state
+  panel.classList.add('collapsible', 'is-collapsed');
+  panel.setAttribute('aria-hidden', 'true');
+  if (panel.hasAttribute('hidden')) panel.removeAttribute('hidden');
+  panel.style.maxHeight = '0px';
+  btn.setAttribute('aria-expanded', 'false');
+  btn.innerHTML = 'More Projects <span aria-hidden="true">▾</span>';
 
-  function openPanel() {
+  function expand() {
     panel.setAttribute('aria-hidden', 'false');
+    panel.classList.replace('is-collapsed', 'is-expanded');
     panel.style.maxHeight = panel.scrollHeight + 'px';
-    panel.style.opacity = '1';
-    panel.style.marginTop = '18px'; // space between grids
     btn.setAttribute('aria-expanded', 'true');
-    btn.innerHTML = 'Collapse <span aria-hidden="true">▴</span>';
+    btn.innerHTML = 'Less Projects <span aria-hidden="true">▴</span>';
   }
-  function closePanel() {
+
+  function collapse() {
     panel.setAttribute('aria-hidden', 'true');
-    // Set to current height before collapsing for smooth transition
+    // Capture current height then animate to zero
     panel.style.maxHeight = panel.scrollHeight + 'px';
-    void panel.offsetHeight; // reflow forces the browser to acknowledge current height
-    panel.style.maxHeight = '0px';
-    panel.style.opacity = '0';
-    panel.style.marginTop = '0px';
+    requestAnimationFrame(() => {
+      panel.classList.replace('is-expanded', 'is-collapsed');
+      panel.style.maxHeight = '0px';
+    });
     btn.setAttribute('aria-expanded', 'false');
     btn.innerHTML = 'More Projects <span aria-hidden="true">▾</span>';
   }
 
   btn.addEventListener('click', () => {
     const expanded = btn.getAttribute('aria-expanded') === 'true';
-    expanded ? closePanel() : openPanel();
+    expanded ? collapse() : expand();
   });
 
-  // Recompute height on resize so things stay smooth when layout shifts
+  // Adjust height on resize if expanded
   window.addEventListener('resize', () => {
     if (btn.getAttribute('aria-expanded') === 'true') {
       panel.style.maxHeight = panel.scrollHeight + 'px';
     }
   });
-})();
+});
 
 // --- Active Navigation Highlight (Scroll Spy) ---
 (function () {
