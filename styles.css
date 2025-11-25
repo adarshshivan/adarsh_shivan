@@ -499,6 +499,56 @@ ul {
     justify-content: center;
 }
 
+/* Social Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--glass-bg);
+    border: var(--glass-border);
+    color: var(--text-primary);
+    transition: var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+}
+
+.social-btn svg {
+    width: 24px;
+    height: 24px;
+    transition: var(--transition-fast);
+}
+
+.social-btn:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent-primary);
+    box-shadow: 0 8px 24px -8px rgba(59, 130, 246, 0.4);
+}
+
+.social-btn.github:hover {
+    color: #fff;
+    background: #0d1117;
+}
+
+.social-btn.linkedin:hover {
+    color: #fff;
+    background: #0a66c2;
+}
+
+.social-btn.instagram:hover {
+    color: #fff;
+    background: linear-gradient(45deg, #fd5949, #d6249f, #285AEB);
+}
+
 /* Footer */
 .site-footer {
     padding: 2rem 0;
